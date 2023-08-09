@@ -16,7 +16,7 @@ export const loginUser = async (req: Request, res: Response) => {
             return res.status(400).send({success:false,error:'Please try to login with correct credentials2'});
         }
         const token: string = await sign(user); 
-        res.status(200).send({message:'user login successfully',success:true,token,data:user})
+        res.status(200).send({message:'user login successfully',success:true,token,data:user,id:user._id})
     }catch(error){
         console.log(error);
     }
