@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx nodemon",
+    "server":"nodemon index.js",
     "watch": "rimraf ./compile && tsc && node compile/index.js",
     "build": "rimraf ./compile && tsc",
     "start": "node compile/index.js"
